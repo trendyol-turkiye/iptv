@@ -4,27 +4,41 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>IPTV Turkiye Bilgi ve Başvuru Formu | IPTV Satın Al Rehberi</title>
+  <title>IPTV Bilgi ve Başvuru Formu | IPTV Satın Al Rehberi</title>
 
-  <meta name="description" content="IPTV hakkında bilgi almak, IPTV satın al seçeneklerini incelemek ve canlı TV, spor, film, dizi yayınları için başvuru formunu doldurabilirsiniz.">
+  <meta name="description" content="IPTV hakkında bilgi almak, IPTV satın al seçeneklerini incelemek, canlı TV, spor, film ve dizi yayınları için başvuru formunu doldurmak isteyen kullanıcılar için hazırlanmış bilgilendirme sayfası.">
 
-  <meta name="keywords" content="iptv, iptv satın al, iptv al, iptv başvuru, iptv fiyatları, canlı tv, 4k iptv, iptv test">
+  <meta name="keywords" content="iptv, iptv satın al, iptv al, iptv fiyatları, iptv test, canlı tv, 4k iptv, iptv başvuru">
 
   <link rel="canonical" href="https://trendyol-turkiye.github.io/iptv/">
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: Arial, Helvetica, sans-serif;
       background: #0b1020;
       color: #ffffff;
       line-height: 1.7;
     }
 
     .container {
-      max-width: 920px;
+      max-width: 980px;
       margin: auto;
       padding: 40px 20px;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #111936, #0f172a);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 22px;
+      padding: 40px 30px;
+      margin-bottom: 25px;
+      box-shadow: 0 15px 45px rgba(0,0,0,0.35);
+      text-align: center;
     }
 
     .box {
@@ -33,24 +47,77 @@
       border-radius: 18px;
       padding: 30px;
       margin-bottom: 25px;
-      box-shadow: 0 10px 35px rgba(0,0,0,0.35);
+      box-shadow: 0 10px 35px rgba(0,0,0,0.28);
     }
 
     h1 {
-      font-size: 36px;
+      font-size: 38px;
+      line-height: 1.25;
+      margin: 0 0 18px;
       color: #ffffff;
-      margin-bottom: 15px;
     }
 
     h2 {
       font-size: 26px;
       color: #38bdf8;
       margin-top: 0;
+      margin-bottom: 14px;
+    }
+
+    h3 {
+      color: #ffffff;
+      font-size: 21px;
+      margin-bottom: 10px;
     }
 
     p {
       color: #dbeafe;
       font-size: 17px;
+      margin-bottom: 16px;
+    }
+
+    ul {
+      color: #dbeafe;
+      font-size: 17px;
+      padding-left: 22px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .btn-area {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px;
+      margin-top: 25px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #2563eb;
+      color: #ffffff;
+      padding: 15px 24px;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.2s ease;
+    }
+
+    .btn:hover {
+      background: #1d4ed8;
+      transform: translateY(-2px);
+    }
+
+    .btn.secondary {
+      background: #020617;
+      border: 1px solid rgba(255,255,255,0.14);
+    }
+
+    .btn.secondary:hover {
+      background: #1e293b;
     }
 
     label {
@@ -70,7 +137,6 @@
       font-size: 15px;
       background: #e5e7eb;
       color: #111827;
-      box-sizing: border-box;
     }
 
     textarea {
@@ -95,11 +161,12 @@
       background: #1d4ed8;
     }
 
-    .link-box {
+    .natural-link {
       background: #020617;
       border-left: 4px solid #38bdf8;
-      padding: 18px;
-      border-radius: 12px;
+      padding: 20px;
+      border-radius: 14px;
+      margin-top: 18px;
     }
 
     a {
@@ -112,9 +179,17 @@
       text-decoration: underline;
     }
 
-    ul {
-      color: #dbeafe;
-      font-size: 17px;
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .mini-card {
+      background: #020617;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 14px;
+      padding: 20px;
     }
 
     .footer {
@@ -122,6 +197,26 @@
       color: #94a3b8;
       font-size: 14px;
       margin-top: 30px;
+      padding-bottom: 20px;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 30px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero, .box {
+        padding: 25px 20px;
+      }
+
+      .btn {
+        width: 100%;
+        text-align: center;
+      }
     }
   </style>
 </head>
@@ -130,19 +225,82 @@
 
   <div class="container">
 
-    <div class="box">
+    <section class="hero">
       <h1>IPTV Bilgi ve Başvuru Formu</h1>
       <p>
-        IPTV, internet bağlantısı üzerinden canlı TV, spor yayınları, film, dizi ve farklı medya içeriklerine erişim sağlayan modern yayın teknolojilerinden biridir. 
-        Bu sayfa, IPTV hakkında bilgi almak isteyen kullanıcılar için hazırlanmış sade bir başvuru ve bilgilendirme alanıdır.
+        IPTV hakkında bilgi almak, cihaz uyumluluğunu öğrenmek ve yayın seçeneklerini değerlendirmek isteyen kullanıcılar için hazırlanmış sade bir bilgilendirme sayfasıdır.
       </p>
       <p>
-        IPTV satın al seçeneklerini değerlendirmeden önce cihaz uyumluluğu, internet hızı, yayın kalitesi ve destek süreci gibi konuların incelenmesi önemlidir.
+        IPTV satın almadan önce yayın kalitesi, internet hızı, cihaz desteği ve kurulum süreci gibi detayların incelenmesi önemlidir.
       </p>
-    </div>
 
-    <div class="box">
+      <div class="btn-area">
+        <a href="#form" class="btn">IPTV Başvuru Formu</a>
+        <a href="https://iptvturkiyeresmi.vip/" target="_blank" rel="noopener" class="btn secondary">
+          IPTV Satın Al Seçeneklerini İncele
+        </a>
+      </div>
+    </section>
+
+    <section class="box">
+      <h2>IPTV Nedir?</h2>
+      <p>
+        IPTV, internet bağlantısı üzerinden canlı TV, spor yayınları, film, dizi ve farklı medya içeriklerine erişim sağlayan yayın teknolojisidir. Klasik uydu veya kablo sistemlerinden farklı olarak yayınlar internet altyapısı üzerinden izlenir.
+      </p>
+      <p>
+        IPTV hizmetlerinde en çok dikkat edilen konular arasında yayın kalitesi, kanal geçiş hızı, canlı yayın gecikmesi, cihaz uyumluluğu ve destek süreci yer alır.
+      </p>
+
+      <div class="natural-link">
+        <p>
+          Güncel paketler, test yayını ve detaylı bilgi için 
+          <a href="https://iptvturkiyeresmi.vip/" target="_blank" rel="noopener">
+            IPTV satın al
+          </a>
+          sayfasını ziyaret edebilirsiniz.
+        </p>
+      </div>
+    </section>
+
+    <section class="box">
+      <h2>IPTV Satın Almadan Önce Nelere Dikkat Edilmeli?</h2>
+
+      <div class="grid">
+        <div class="mini-card">
+          <h3>Yayın Kalitesi</h3>
+          <p>
+            HD, Full HD ve 4K yayın desteği sunan IPTV sistemleri daha net ve akıcı bir izleme deneyimi sağlar.
+          </p>
+        </div>
+
+        <div class="mini-card">
+          <h3>Cihaz Uyumluluğu</h3>
+          <p>
+            Smart TV, Android TV Box, telefon, tablet ve bilgisayar gibi cihazlarda sorunsuz çalışması önemlidir.
+          </p>
+        </div>
+
+        <div class="mini-card">
+          <h3>Kurulum Kolaylığı</h3>
+          <p>
+            IPTV kurulumu kullanıcı için anlaşılır olmalı ve gerekli bilgiler hızlı şekilde paylaşılmalıdır.
+          </p>
+        </div>
+
+        <div class="mini-card">
+          <h3>Destek Süreci</h3>
+          <p>
+            Yayın, kurulum veya cihaz ayarlarında hızlı destek alınabilmesi kullanıcı deneyimini güçlendirir.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="box" id="form">
       <h2>IPTV Başvuru Formu</h2>
+      <p>
+        Aşağıdaki form, IPTV hakkında bilgi almak isteyen kullanıcılar için örnek başvuru alanı olarak hazırlanmıştır.
+      </p>
 
       <form>
         <label>Ad Soyad</label>
@@ -160,7 +318,7 @@
           <option>Diğer</option>
         </select>
 
-        <label>İlgilendiğiniz Hizmet</label>
+        <label>İlgilendiğiniz Konu</label>
         <select>
           <option>IPTV test yayını</option>
           <option>IPTV satın al</option>
@@ -173,41 +331,34 @@
 
         <button type="button">Başvuru Bilgilerini Gönder</button>
       </form>
-    </div>
+    </section>
 
-    <div class="box">
-      <h2>IPTV Satın Almadan Önce Nelere Dikkat Edilmeli?</h2>
+    <section class="box">
+      <h2>IPTV Kullanım Alanları</h2>
       <ul>
-        <li>Yayın kalitesi HD, Full HD veya 4K desteği sunmalı.</li>
-        <li>Canlı TV, spor, film ve dizi içerikleri düzenli çalışmalı.</li>
-        <li>Kurulum süreci kolay ve anlaşılır olmalı.</li>
-        <li>Smart TV, Android TV, telefon ve bilgisayar uyumluluğu bulunmalı.</li>
-        <li>Destek ekibi hızlı dönüş sağlamalı.</li>
+        <li>Canlı TV kanallarını internet üzerinden izlemek</li>
+        <li>Spor yayınlarına farklı cihazlardan erişmek</li>
+        <li>Film ve dizi içeriklerini tek panelden takip etmek</li>
+        <li>Smart TV, Android TV, telefon ve bilgisayar üzerinden yayın izlemek</li>
+        <li>Evde veya yurt dışında Türkçe yayın seçeneklerini değerlendirmek</li>
       </ul>
-    </div>
+    </section>
 
-    <div class="box link-box">
+    <section class="box">
       <h2>Detaylı IPTV Bilgisi</h2>
       <p>
-        IPTV paketleri, test yayını ve güncel başvuru seçenekleri hakkında daha fazla bilgi almak için 
-        <a href="https://iptvturkiyeresmi.vip/" target="_blank" rel="noopener">IPTV satın al</a> 
-        sayfasını ziyaret edebilirsiniz.
+        IPTV paketleri, test yayını, kurulum bilgileri ve güncel başvuru seçenekleri için ana bilgilendirme sayfasını inceleyebilirsiniz.
       </p>
-    </div>
 
-    <div class="box">
-      <h2>IPTV Nedir?</h2>
-      <p>
-        IPTV, klasik uydu veya kablo yayın sistemlerinden farklı olarak internet altyapısı üzerinden çalışan bir yayın modelidir. 
-        Kullanıcılar uygun cihazlar üzerinden canlı TV kanallarına, spor yayınlarına, film ve dizi içeriklerine erişebilir.
-      </p>
-      <p>
-        IPTV hizmetlerinde en çok dikkat edilen konular arasında yayın gecikmesi, görüntü kalitesi, kanal geçiş hızı, cihaz uyumluluğu ve teknik destek yer alır.
-      </p>
-    </div>
+      <div class="btn-area">
+        <a href="https://iptvturkiyeresmi.vip/" target="_blank" rel="noopener" class="btn">
+          IPTV Satın Al
+        </a>
+      </div>
+    </section>
 
     <div class="footer">
-      © 2026 IPTV Bilgi Formu - Bağımsız bilgilendirme sayfası
+      © 2026 IPTV Bilgi Formu - Bağımsız bilgilendirme ve başvuru sayfası
     </div>
 
   </div>
