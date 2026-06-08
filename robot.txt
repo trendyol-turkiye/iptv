@@ -1,0 +1,7 @@
+Plaintext
+# Tüm arama motoru botlarına izin ver
+User-agent: *
+Allow: /
+
+# Web sitenizin site haritasının yerini botlara gösterin
+Sitemap: https://iptv-satin-al.vercel.app/sitemap.xml
